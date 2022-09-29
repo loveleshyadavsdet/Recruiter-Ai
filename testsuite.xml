@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Recruiter Ai Test Suite">
+<test name="Recruiter Ai Login and Logout">
+<classes>
+<class name ="testrunners.AiLoginLogout"/>
+</classes>
+</test>
+<test name="Create New Job with Basic Information">
+<classes>
+<class name ="testrunners.CreateJobBasic"/>
+</classes>
+</test>
+<test name="Create New Job with all Details">
+<classes>
+<class name ="testrunners.CreateCompleteJob"/>
+</classes>
+</test>
+<test name="Add Collaborators and Interview Setup">
+<classes>
+<class name ="testrunners.Collaborators"/>
+</classes>
+</test>
+</suite>

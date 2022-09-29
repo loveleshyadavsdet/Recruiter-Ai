@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Recruiter Ai Test Suite]">
+  <test thread-count="5" name="Create New Job with Basic Information(failed)">
+    <classes>
+      <class name="testrunners.CreateJobBasic">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testrunners.CreateJobBasic -->
+    </classes>
+  </test> <!-- Create New Job with Basic Information(failed) -->
+  <test thread-count="5" name="Create New Job with all Details(failed)">
+    <classes>
+      <class name="testrunners.CreateCompleteJob">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testrunners.CreateCompleteJob -->
+    </classes>
+  </test> <!-- Create New Job with all Details(failed) -->
+  <test thread-count="5" name="Add Collaborators and Interview Setup(failed)">
+    <classes>
+      <class name="testrunners.Collaborators">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testrunners.Collaborators -->
+    </classes>
+  </test> <!-- Add Collaborators and Interview Setup(failed) -->
+</suite> <!-- Failed suite [Recruiter Ai Test Suite] -->

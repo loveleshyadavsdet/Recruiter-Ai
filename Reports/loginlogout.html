@@ -1,0 +1,2683 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/bee7a4abdc590e21eec8618a90c81ff4d16e500a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Sep 29, 2022 04:33:43 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.1.0</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@tag</a></li>
+					<li><a href='#'>@Login</a></li>
+					<li><a href='#'>@Logout</a></li>
+					<li><a href='#'>@CloseBrowser</a></li>
+					<li><a href='#'>@CreateNewJob</a></li>
+					<li><a href='#'>@Skills&Education</a></li>
+					<li><a href='#'>@AdditionalInformation</a></li>
+					<li><a href='#'>@PrescreeningQuestions</a></li>
+					<li><a href='#'>@Attachments</a></li>
+					<li><a href='#'>@EnableCollaborators</a></li>
+					<li><a href='#'>@Enableprescreeningsettings</a></li>
+					<li><a href='#'>@EnableAutoshortlist</a></li>
+					<li><a href='#'>@Interviewsetup</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='25%'><span class='strong'>1</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='75%'>3</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='60.87%'><span class='strong'>14</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='39.13%'>9</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='42.991%'><span class='strong'>46</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='8.411%'>9</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='48.598%'>52</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Login and Logout</span>
+						<span class='test-time'>Sep 29, 2022 04:33:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Login</span>
+	</div>
+	<span class='duration right label'>0h 0m 31s+206ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Login Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Launch Application using valid URL</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User enters valid credentials</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='5' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Logout</span>
+	</div>
+	<span class='duration right label'>0h 0m 18s+684ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Logout Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='6' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Logout Button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='7' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CloseBrowser</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+168ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">close Browser</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='8' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Close Browser</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Create new Job with Basic Information</span>
+						<span class='test-time'>Sep 29, 2022 04:34:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='10' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Login</span>
+	</div>
+	<span class='duration right label'>0h 0m 30s+950ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Login Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='11' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Launch Application using valid URL</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='12' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User enters valid credentials</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='13' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CreateNewJob</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+813ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify create new job functionality with basic information</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='14' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Recruiter clicks on Jobs Menu</span>
+				<div class='pre'><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="bx--header__menu-item" tabindex="0">...</a> is not clickable at point (427, 23). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56072}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbc009eebd791997b83501d497cea51f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.recruiter_clicks_on_Jobs_Menu(Stepdefinitions.java:70)
+	at ?.Given Recruiter clicks on Jobs Menu(featurefiles/CreateJobBasic.feature:11)
+</textarea></div>
+			
+		</li>
+		<li test-id='15' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then select create new job section</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='16' class='node when skip' status='skip'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When click on Start button of form</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='17' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on Add New Office button to add new office Address</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='18' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Title</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='19' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select Job Status</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='20' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose candidates from other countries</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='21' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And enable rank and file job</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='22' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select Country Location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='23' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select City location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='24' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add skills</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='25' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Qualification</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='26' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add job type</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='27' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select minimum experience</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='28' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select maximum experience</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='29' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose Employment type</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='30' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add no of vacancies</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='31' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Description</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='32' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Requirements</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='33' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose office location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='34' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on submit button of job</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='35' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Logout</span>
+	</div>
+	<span class='duration right label'>0h 0m 19s+352ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Logout Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='36' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Logout Button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='37' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CloseBrowser</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+467ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">close Browser</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='38' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Close Browser</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>Create New Job with all details</span>
+						<span class='test-time'>Sep 29, 2022 04:35:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='40' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Login</span>
+	</div>
+	<span class='duration right label'>0h 0m 27s+402ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Login Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='41' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Launch Application using valid URL</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='42' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User enters valid credentials</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='43' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CreateNewJob</span>
+	</div>
+	<span class='duration right label'>0h 1m 34s+56ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify create new job functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='44' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Recruiter clicks on Jobs Menu</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='45' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then select create new job section</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='46' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When click on Start button of form</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='47' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on Add New Office button to add new office Address</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='48' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Title</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='49' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select Job Status</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='50' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select Country Location</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='51' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select City location</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='52' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add skills</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='53' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Qualification</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='54' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add job type</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='55' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select minimum experience</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='56' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select maximum experience</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='57' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose Employment type</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='58' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add no of vacancies</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='59' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Description</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='60' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Requirements</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='61' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose office location</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='62' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Skills&Education</span>
+	</div>
+	<span class='duration right label'>0h 0m 10s+872ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify recruiter able to add Skills and Education</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='63' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given add skills and Education</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='64' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When add industry field</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='65' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Education</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='66' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@AdditionalInformation</span>
+	</div>
+	<span class='duration right label'>0h 0m 0s+795ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify recruiter able to add AdditionalInformation</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='67' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given click on Additional Information</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='68' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When add Work Location</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='69' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add working Hours</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='70' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And enter minimal Annual Salary</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='71' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And enter maximum Annual Salary</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='72' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@PrescreeningQuestions</span>
+	</div>
+	<span class='duration right label'>0h 0m 5s+617ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify recruiter able to choose pre screening questions</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='73' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given add pre screening questions</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='74' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When click on Add Question button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='75' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select questions from displayed List</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='76' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on Add Selected option</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='77' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Attachments</span>
+	</div>
+	<span class='duration right label'>0h 0m 6s+778ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Attachments functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='78' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Attachments section</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='79' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When upload Attachment file</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='80' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on submit after uploading file</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='81' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Logout</span>
+	</div>
+	<span class='duration right label'>0h 0m 5s+91ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Logout Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='82' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Logout Button</span>
+				<div class='pre'><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button href="/auth/logout" aria-label="Logout" class="bx--header__action" type="button">...</button> is not clickable at point (1502, 24). Other element would receive the click: <div id="i4yn15bg8w" class="Toastify__toast Toastify__toast--error Toastify__bounce-exit--top-right" style="animation-fill-mode: forwards; animation-duration: 750ms;">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 911ff666c9cf58008743cd476ecbf07a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.click_on_Logout_Button(Stepdefinitions.java:47)
+	at ?.Given Click on Logout Button(featurefiles/CreateCompleteJob.feature:60)
+</textarea></div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='83' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CloseBrowser</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+516ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">close Browser</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='84' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Close Browser</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='85'>
+					<div class='test-heading'>
+						<span class='test-name'>Collaborators and interview setup</span>
+						<span class='test-time'>Sep 29, 2022 04:38:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='86' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Login</span>
+	</div>
+	<span class='duration right label'>0h 0m 31s+556ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Login Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='87' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Launch Application using valid URL</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='88' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User enters valid credentials</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='89' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CreateNewJob</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+267ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify create new job functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='90' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Recruiter clicks on Jobs Menu</span>
+				<div class='pre'><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="bx--header__menu-item" tabindex="0">...</a> is not clickable at point (427, 23). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.recruiter_clicks_on_Jobs_Menu(Stepdefinitions.java:70)
+	at ?.Given Recruiter clicks on Jobs Menu(Featurefiles/collaborators.feature:11)
+</textarea></div>
+			
+		</li>
+		<li test-id='91' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then select create new job section</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='92' class='node when skip' status='skip'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When click on Start button of form</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='93' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on Add New Office button to add new office Address</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='94' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Title</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='95' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select Job Status</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='96' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose candidates from other countries</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='97' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And enable rank and file job</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='98' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select Country Location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='99' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select City location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='100' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add skills</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='101' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Qualification</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='102' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add job type</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='103' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select minimum experience</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='104' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And select maximum experience</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='105' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose Employment type</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='106' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add no of vacancies</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='107' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Description</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='108' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And add Job Requirements</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='109' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose office location</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='110' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on submit button of job</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='111' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@EnableCollaborators</span>
+	</div>
+	<span class='duration right label'>0h 0m 23s+97ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify Enable Collaborators toggle functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='112' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Enable collaborator control</span>
+				<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='app-container']/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=//*[@id='app-container']/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.enable_collaborator_control(Stepdefinitions.java:409)
+	at ?.Given Enable collaborator control(Featurefiles/collaborators.feature:35)
+</pre></div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='113' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Enableprescreeningsettings</span>
+	</div>
+	<span class='duration right label'>0h 0m 13s+202ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify pre screening Settings</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='114' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given enable prescreening settings</span>
+				<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=(//span[@class='bx--toggle__switch'])[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.enable_prescreening_settings(Stepdefinitions.java:431)
+	at ?.Given enable prescreening settings(Featurefiles/collaborators.feature:39)
+</pre></div>
+			
+		</li>
+		<li test-id='115' class='node when skip' status='skip'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When click on Add Question button</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='116' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Select questions from Questions List</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='117' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And click on Add Selected</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='118' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And ask pre screening questions via chatbot</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='119' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And enable submit only if candidate answers knockout Questions</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='120' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And save pre screening Settings</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='121' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@EnableAutoshortlist</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+38ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify pre screening shortlist criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='122' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given user Enables Autoshortlist button</span>
+				<div class='pre'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=(//span[@class='bx--toggle__switch'])[5]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.user_Enables_Autoshortlist_button(Stepdefinitions.java:453)
+	at ?.Given user Enables Autoshortlist button(Featurefiles/collaborators.feature:49)
+</pre></div>
+			
+		</li>
+		<li test-id='123' class='node when skip' status='skip'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When user gives passing points</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='124' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Save Autoshortlist settings</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='125' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Interviewsetup</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+42ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">verify interview setup</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='126' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given user enable interview setup button</span>
+				<div class='pre'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=(//span[@class='bx--toggle__switch'])[6]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.user_enable_interview_setup_button(Stepdefinitions.java:470)
+	at ?.Given user enable interview setup button(Featurefiles/collaborators.feature:55)
+</pre></div>
+			
+		</li>
+		<li test-id='127' class='node when skip' status='skip'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When user click on add interview stage</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='128' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Choose interview Stage</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='129' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And choose interview type</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+		<li test-id='130' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And submit interview setup</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='131' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Logout</span>
+	</div>
+	<span class='duration right label'>0h 0m 4s+30ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Recruiter Ai Logout Functionality</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='132' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Click on Logout Button</span>
+				<div class='pre'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=//button[@aria-label='Logout']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.click_on_Logout_Button(Stepdefinitions.java:47)
+	at ?.Given Click on Logout Button(Featurefiles/collaborators.feature:63)
+</pre></div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='133' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@CloseBrowser</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+377ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">close Browser</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='134' class='node given fail' status='fail'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Close Browser</span>
+				<div class='pre'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepdefinitions.Stepdefinitions.close_Browser(Stepdefinitions.java:59)
+	at ?.Given Close Browser(Featurefiles/collaborators.feature:67)
+</pre></div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:33:43 PM</td>
+										<td class='linked' test-id='1'>Login and Logout</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:34:36 PM</td>
+										<td class='linked' test-id='9'>Create new Job with Basic Information</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:35:32 PM</td>
+										<td class='linked' test-id='39'>Create New Job with all details</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:38:06 PM</td>
+										<td class='linked' test-id='85'>Collaborators and interview setup</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Login</span>
+						<span class='category-status right'>
+							<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:33:43 PM</td>
+										<td class='linked' test-id='2'>Login and Logout.Verify Recruiter Ai Login Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:34:36 PM</td>
+										<td class='linked' test-id='10'>Create new Job with Basic Information.Verify Recruiter Ai Login Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:35:32 PM</td>
+										<td class='linked' test-id='40'>Create New Job with all details.Verify Recruiter Ai Login Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:38:06 PM</td>
+										<td class='linked' test-id='86'>Collaborators and interview setup.Verify Recruiter Ai Login Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Logout</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:34:15 PM</td>
+										<td class='linked' test-id='5'>Login and Logout.Verify Recruiter Ai Logout Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:35:10 PM</td>
+										<td class='linked' test-id='35'>Create new Job with Basic Information.Verify Recruiter Ai Logout Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:37:58 PM</td>
+										<td class='linked' test-id='81'>Create New Job with all details.Verify Recruiter Ai Logout Functionality</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:39:23 PM</td>
+										<td class='linked' test-id='131'>Collaborators and interview setup.Verify Recruiter Ai Logout Functionality</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@CloseBrowser</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:34:33 PM</td>
+										<td class='linked' test-id='7'>Login and Logout.close Browser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:35:30 PM</td>
+										<td class='linked' test-id='37'>Create new Job with Basic Information.close Browser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:38:03 PM</td>
+										<td class='linked' test-id='83'>Create New Job with all details.close Browser</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:39:27 PM</td>
+										<td class='linked' test-id='133'>Collaborators and interview setup.close Browser</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@CreateNewJob</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:35:07 PM</td>
+										<td class='linked' test-id='13'>Create new Job with Basic Information.Verify create new job functionality with basic information</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:36:00 PM</td>
+										<td class='linked' test-id='43'>Create New Job with all details.Verify create new job functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2022 04:38:37 PM</td>
+										<td class='linked' test-id='89'>Collaborators and interview setup.Verify create new job functionality</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Skills&Education</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:37:34 PM</td>
+										<td class='linked' test-id='62'>Create New Job with all details.verify recruiter able to add Skills and Education</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@AdditionalInformation</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:37:45 PM</td>
+										<td class='linked' test-id='66'>Create New Job with all details.verify recruiter able to add AdditionalInformation</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PrescreeningQuestions</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:37:46 PM</td>
+										<td class='linked' test-id='72'>Create New Job with all details.verify recruiter able to choose pre screening questions</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Attachments</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:37:51 PM</td>
+										<td class='linked' test-id='77'>Create New Job with all details.Verify Attachments functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EnableCollaborators</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:38:41 PM</td>
+										<td class='linked' test-id='111'>Collaborators and interview setup.verify Enable Collaborators toggle functionality</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Enableprescreeningsettings</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:39:04 PM</td>
+										<td class='linked' test-id='113'>Collaborators and interview setup.verify pre screening Settings</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EnableAutoshortlist</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:39:17 PM</td>
+										<td class='linked' test-id='121'>Collaborators and interview setup.verify pre screening shortlist criteria</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Interviewsetup</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2022 04:39:20 PM</td>
+										<td class='linked' test-id='125'>Collaborators and interview setup.verify interview setup</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:35:07 PM</td>
+                                                        <td class='linked' test-id='14'>Create new Job with Basic Information.Verify create new job functionality with basic information.Given Recruiter clicks on Jobs Menu</td>
+                                                        <td><pre><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="bx--header__menu-item" tabindex="0">...</a> is not clickable at point (427, 23). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56072}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbc009eebd791997b83501d497cea51f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.recruiter_clicks_on_Jobs_Menu(Stepdefinitions.java:70)
+	at ?.Given Recruiter clicks on Jobs Menu(featurefiles/CreateJobBasic.feature:11)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:37:58 PM</td>
+                                                        <td class='linked' test-id='82'>Create New Job with all details.Verify Recruiter Ai Logout Functionality.Given Click on Logout Button</td>
+                                                        <td><pre><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button href="/auth/logout" aria-label="Logout" class="bx--header__action" type="button">...</button> is not clickable at point (1502, 24). Other element would receive the click: <div id="i4yn15bg8w" class="Toastify__toast Toastify__toast--error Toastify__bounce-exit--top-right" style="animation-fill-mode: forwards; animation-duration: 750ms;">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 911ff666c9cf58008743cd476ecbf07a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.click_on_Logout_Button(Stepdefinitions.java:47)
+	at ?.Given Click on Logout Button(featurefiles/CreateCompleteJob.feature:60)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:38:37 PM</td>
+                                                        <td class='linked' test-id='90'>Collaborators and interview setup.Verify create new job functionality.Given Recruiter clicks on Jobs Menu</td>
+                                                        <td><pre><textarea>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="bx--header__menu-item" tabindex="0">...</a> is not clickable at point (427, 23). Other element would receive the click: <div class="bx--loading-overlay">...</div>
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at stepdefinitions.Stepdefinitions.recruiter_clicks_on_Jobs_Menu(Stepdefinitions.java:70)
+	at ?.Given Recruiter clicks on Jobs Menu(Featurefiles/collaborators.feature:11)
+</textarea></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:38:41 PM</td>
+                                                        <td class='linked' test-id='112'>Collaborators and interview setup.verify Enable Collaborators toggle functionality.Given Enable collaborator control</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='app-container']/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=//*[@id='app-container']/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.enable_collaborator_control(Stepdefinitions.java:409)
+	at ?.Given Enable collaborator control(Featurefiles/collaborators.feature:35)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:39:04 PM</td>
+                                                        <td class='linked' test-id='114'>Collaborators and interview setup.verify pre screening Settings.Given enable prescreening settings</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=(//span[@class='bx--toggle__switch'])[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.enable_prescreening_settings(Stepdefinitions.java:431)
+	at ?.Given enable prescreening settings(Featurefiles/collaborators.feature:39)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchWindowException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:39:17 PM</td>
+                                                        <td class='linked' test-id='122'>Collaborators and interview setup.verify pre screening shortlist criteria.Given user Enables Autoshortlist button</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=(//span[@class='bx--toggle__switch'])[5]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.user_Enables_Autoshortlist_button(Stepdefinitions.java:453)
+	at ?.Given user Enables Autoshortlist button(Featurefiles/collaborators.feature:49)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:39:20 PM</td>
+                                                        <td class='linked' test-id='126'>Collaborators and interview setup.verify interview setup.Given user enable interview setup button</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=(//span[@class='bx--toggle__switch'])[6]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.user_enable_interview_setup_button(Stepdefinitions.java:470)
+	at ?.Given user enable interview setup button(Featurefiles/collaborators.feature:55)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:39:23 PM</td>
+                                                        <td class='linked' test-id='132'>Collaborators and interview setup.Verify Recruiter Ai Logout Functionality.Given Click on Logout Button</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+*** Element info: {Using=xpath, value=//button[@aria-label='Logout']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepdefinitions.Stepdefinitions.click_on_Logout_Button(Stepdefinitions.java:47)
+	at ?.Given Click on Logout Button(Featurefiles/collaborators.feature:63)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Sep 29, 2022 04:39:27 PM</td>
+                                                        <td class='linked' test-id='134'>Collaborators and interview setup.close Browser.Given Close Browser</td>
+                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAUL', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56440}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ddcd721752b050f60a40cfe7da1e95c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepdefinitions.Stepdefinitions.close_Browser(Stepdefinitions.java:59)
+	at ?.Given Close Browser(Featurefiles/collaborators.feature:67)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>23</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>107</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 29, 2022 04:33:43 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 29, 2022 04:39:29 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>346,065ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>@tag</td>
+							<td>1</td>
+							<td>3</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Login</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Logout</td>
+							<td>2</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@CloseBrowser</td>
+							<td>3</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@CreateNewJob</td>
+							<td>1</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Skills&Education</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@AdditionalInformation</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@PrescreeningQuestions</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Attachments</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EnableCollaborators</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Enableprescreeningsettings</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EnableAutoshortlist</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Interviewsetup</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 3,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 3,
+				
+				passChild: 14,
+				failChild: 9,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 9,
+				
+				passGrandChild: 46,
+				failGrandChild: 9,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 52,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 61,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
